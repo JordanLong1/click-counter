@@ -60,13 +60,6 @@ test("clicking on button decrements the counter and counter does not go below ze
   expect(count).toBe("-1");
 }); 
 
-test("do not let the count go below 0", () => {
-  const wrapper = setup(); 
-  const count = findByTestAttribute(wrapper, "decrement-counter").get(0); 
-  expect(count).toBe(0);
-  count.simulate("click");
-  new Error("The count can not go below zero")
-});
 
 
 
